@@ -11,6 +11,7 @@
     "grunt-contrib-watch": "*",
     "grunt-develop": "0.2",
     "grunt-contrib-compass": "*",
-    "grunt-jsbeautifier": "*"
+    "grunt-jsbeautifier": "*",
+    "grunt-contrib-uglify": "*"
   }
 }
