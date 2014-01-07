@@ -1,0 +1,16 @@
+{
+  "name": "ci-boilerplate",
+  "description":"",
+  "version": "0.0.1",
+  "dependencies": {
+    
+  },
+  "devDependencies":{
+    "grunt-cli": "0.1.9",
+    "grunt": "0.4.1",
+    "grunt-contrib-watch": "*",
+    "grunt-develop": "0.2",
+    "grunt-contrib-compass": "*",
+    "grunt-jsbeautifier": "*"
+  }
+}
