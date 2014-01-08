@@ -1,8 +1,20 @@
-@import "../lib/normalize-2.1.3.css";
+// compass, compass extensions, and the util
 @import "compass";
-$white: #fff;
-$black: #000;
-$otherColor: #ccc;
+@import "utils";
+
+// reset, fonts, and other globals
+@import "reset";
+@import "fonts";
+
+//@import "font_awesome";
+// see list of icons here:  http://fortawesome.github.com/Font-Awesome/
+
+// site styles go here
+@import "layout";
+@import "modal";
+
+// media queries & print styles
+@import "print";
 
 body {
 	background: $white;

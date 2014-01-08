@@ -1,0 +1,66 @@
+/* Sass Variables 
+==================*/
+
+$white: #fff;
+$black: #000;
+$otherColor: #ccc;
+
+
+/* Custom Classes 
+==================*/
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; border: 0; }
+.hidden { display: none; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fluid-youtube {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+/* Mixins
+============ */
+
+// uncomment the next line if you want to use the btn mixin.
+// @import "buttons/*.png";
+
+
+@mixin btn ($image, $inline) {
+  $image_path: "buttons/#{$image}.png";
+  @extend .ir; 
+  @include buttons-sprite($image); 
+  width: image-width($image_path); 
+  height: image-height($image_path);
+  cursor: pointer;
+  @if $inline == 'inline' {
+    display: inline-block;
+  }
+}
+
+@mixin image-replace ($image) {
+	@extend .ir;
+	width: image-width($image); 
+	height: image-height($image);
+	background: image-url($image);
+}
+
+@mixin placeholder {
+  &.placeholder { @content }
+  &:-moz-placeholder { @content }
+  &::-webkit-input-placeholder { @content }
+}
