@@ -38,9 +38,12 @@
 |
 */
 
-$route['default_controller'] = "main";
-$route['404_override'] = '';
+// $route['default_controller'] = "main";
+// $route['404_override'] = '';
 
+$route['default_controller'] = 'pages/view/home';
+$route['(:any)'] = 'pages/view/$1';
+$route['404_override'] = '';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
