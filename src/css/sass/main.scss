@@ -3,14 +3,16 @@
 @import "compass";
 @import "utils";
 
-
-
 // reset, fonts, and other globals
 @import "reset";
 @import "fonts";
 
 //@import "font_awesome";
 // see list of icons here:  http://fortawesome.github.com/Font-Awesome/
+
+// plugins
+@import "bootstrap";
+@import "bootstrap-theme";
 
 // site styles go here
 @import "layout";
