@@ -6,7 +6,7 @@ module.exports = function(grunt) {
                 files: [
                     'src/js/**/*'
                 ],
-                tasks: ['compass'],
+                tasks: ['uglify'],
                 options: {
                     nospawn: true
                 }
@@ -32,19 +32,39 @@ module.exports = function(grunt) {
         },
         jsbeautifier: {
             files: [
-                'src/js/**/*'
+                'src/js/**/*',
+                'Gruntfile.js'
             ],
             options: {}
+        },
+        uglify: {
+            options: {
+                // expand: true,
+                mangle: true,
+                compress: true,
+                report: 'min',
+                preserveComments: false,
+                banner: '',
+                footer: ''
+            },
+            my_target: {
+                files: {
+                    'src/js/dist/require.min.js': ['src/js/lib/require-2.1.9.js'],
+                    'src/js/dist/jquery.min.js': ['src/js/lib/jquery-1.10.2.js'],
+                    'src/js/dist/main.min.js': ['src/js/main.js']
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-develop');
     grunt.loadNpmTasks('grunt-jsbeautifier');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('default', ['compass', 'watch']);
+    grunt.registerTask('default', ['compass', 'uglify', 'watch']);
     grunt.registerTask('styles', ['compass']);
+    grunt.registerTask('scripts', ['uglify']);
     grunt.registerTask('beautify', ['jsbeautifier']);
 
 };
