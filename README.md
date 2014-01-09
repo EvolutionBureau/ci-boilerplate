@@ -6,10 +6,13 @@
 
 * [npm](http://nodejs.org/)
 
+* [Composer](http://getcomposer.org)
+
 ## Installation
 
 ```
 $ cd /path/to/project
+$ php composer.phar install
 $ npm install
 $ node_modules/.bin/grunt
 ```

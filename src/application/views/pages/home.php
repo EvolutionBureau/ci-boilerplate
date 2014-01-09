@@ -50,6 +50,7 @@
           <li>Beautify your JS <code>node_modules/.bin/grunt beautify</code></li>
           <li>Manually compile your CSS <code>node_modules/.bin/grunt styles</code></li>
           <li>Manually compile your JS <code>node_modules/.bin/grunt scripts</code></li>
+          <li>Mobile detection.  Your device is a: <?= $deviceType ?></li>
         </ol>
         <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
       </div>

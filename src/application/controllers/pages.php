@@ -1,10 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Pages extends CI_Controller {
+class Pages extends MY_Controller {
 
 	public function index()
 	{
-		$data = array();
+		$data = array('deviceType' => $deviceType = ($this->detect->isMobile() ? ($this->detect->isTablet() ? 'tablet' : 'phone') : 'computer'));
+
 		$this->load->view('templates/header', $data);
 		$this->load->view('pages/home', $data);
 		$this->load->view('templates/footer', $data);

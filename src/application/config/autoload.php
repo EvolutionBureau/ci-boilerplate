@@ -36,7 +36,6 @@
 |  $autoload['packages'] = array(APPPATH.'third_party', '/usr/local/shared');
 |
 */
-
 $autoload['packages'] = array();
 
 
