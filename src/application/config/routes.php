@@ -41,8 +41,7 @@
 // $route['default_controller'] = "main";
 // $route['404_override'] = '';
 
-$route['default_controller'] = 'pages/view/home';
-$route['(:any)'] = 'pages/view/$1';
+$route['default_controller'] = 'pages';
 $route['404_override'] = '';
 
 /* End of file routes.php */

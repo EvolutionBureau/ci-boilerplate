@@ -358,5 +358,18 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
+/*
+|--------------------------------------------------------------------------
+| Site Defaults
+|--------------------------------------------------------------------------
+|
+| Meta data for the website, title, desc etc.
+|
+|
+*/
+$config['site_title'] = 'Evolution Bureau';
+$config['site_description'] = 'This is an example of description copy. Please change me!';
+
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */
