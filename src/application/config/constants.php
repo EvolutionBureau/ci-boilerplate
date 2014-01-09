@@ -1,17 +1,4 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
-/*
-|--------------------------------------------------------------------------
-| Site Constants
-|--------------------------------------------------------------------------
-|
-| Meta data for the website, title, desc etc.
-|
-|
-*/
-define('SITE_TITLE', 'Evolution Bureau');
-define('SITE_DESCRIPTION', 'This is an example of description copy. Please change me!');
-
 /*
 |--------------------------------------------------------------------------
 | File and Directory Modes

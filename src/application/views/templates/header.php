@@ -7,8 +7,8 @@
       <!-- BEGIN: meta tags -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php echo $title ?> - Evolution Bureau</title>
-        <meta name="description" content="<?php echo SITE_DESCRIPTION; ?>">
+        <title><?= $this->config->item('site_title'); ?></title>
+        <meta name="description" content="<?= $this->config->item('site_description'); ?>">
         <meta name="viewport" content="width=device-width">
       <link rel="shortcut icon" href="favicon.ico"/> 
 
