@@ -5,6 +5,7 @@
       </footer>
     </div><!-- /end .container --> 
 
-      <script data-main="js/dist/main.min" src="/js/dist/require.min.js"></script>
+      <script data-main="scripts/main.js" src="/scripts/vendor/requirejs/require.js"></script>
+
     </body>
 </html>

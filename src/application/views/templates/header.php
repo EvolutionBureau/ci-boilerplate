@@ -35,7 +35,6 @@
 
         <link rel="stylesheet" href="/css/main.css">
 
-        <script src="/js/lib/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script>
           /*<![CDATA[*/
             document.createElement('header');
