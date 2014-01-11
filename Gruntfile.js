@@ -1,14 +1,13 @@
 module.exports = function(grunt) {
 
     grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
         watch: {
-            js: {
-                files: [
-                    'src/js/**/*'
-                ],
-                tasks: ['uglify'],
+            scripts: {
+                files: ['src/scripts/*.js', 'src/scripts/**/*.js'],
+                tasks: ['requirejs'],
                 options: {
-                    nospawn: true
+                    spawn: false,
                 }
             },
             sass: {
@@ -32,7 +31,7 @@ module.exports = function(grunt) {
         },
         jsbeautifier: {
             files: [
-                'src/js/**/*',
+                'src/scripts/**/*',
                 'Gruntfile.js'
             ],
             options: {}
@@ -49,11 +48,20 @@ module.exports = function(grunt) {
             },
             my_target: {
                 files: {
-                    'src/js/dist/require.min.js': ['src/js/lib/require-2.1.9.js'],
-                    'src/js/dist/jquery.min.js': ['src/js/lib/jquery-1.10.2.js'],
-                    'src/js/dist/main.min.js': ['src/js/main.js']
+                    'src/scripts/dist/main.min.js': ['src/scripts/main.js']
                 }
             }
+        },
+        requirejs: {
+          compile: {
+            options: {
+              baseUrl: "src/scripts",
+              mainConfigFile: "src/scripts/main.js",
+              name: "main",
+              out: "src/scripts/dist/main.min.js",
+              include: ['vendor/requirejs/require.js']
+            }
+          }
         }
     });
 
@@ -61,8 +69,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-jsbeautifier');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
 
-    grunt.registerTask('default', ['compass', 'uglify', 'watch']);
+    grunt.registerTask('default', ['requirejs', 'compass', 'watch']);
     grunt.registerTask('styles', ['compass']);
     grunt.registerTask('scripts', ['uglify']);
     grunt.registerTask('beautify', ['jsbeautifier']);

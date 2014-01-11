@@ -1,3 +1,4 @@
+// Paths to requirejs js files
 require.config({
 	paths : {
 		"jquery" : "vendor/jquery/jquery",
@@ -8,6 +9,7 @@ require.config({
 	}
 });
 
+// Require the main app view to start the project
 require(['views/app'], function(AppView){
 	new AppView;
 });
