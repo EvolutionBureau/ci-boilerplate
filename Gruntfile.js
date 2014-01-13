@@ -4,8 +4,8 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         watch: {
             scripts: {
-                files: ['src/scripts/*.js', 'src/scripts/**/*.js'],
-                tasks: ['requirejs'],
+                files: ['src/scripts/*.js', 'src/scripts/vendor/*.js'],
+                tasks: ['uglify'],
                 options: {
                     spawn: false,
                 }
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
 
-    grunt.registerTask('default', ['requirejs', 'compass', 'watch']);
+    grunt.registerTask('default', ['requirejs', 'uglify', 'compass', 'watch']);
     grunt.registerTask('styles', ['compass']);
     grunt.registerTask('scripts', ['uglify']);
     grunt.registerTask('beautify', ['jsbeautifier']);
