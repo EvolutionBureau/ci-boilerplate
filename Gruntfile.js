@@ -1,3 +1,5 @@
+var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
+
 module.exports = function(grunt) {
 
     grunt.initConfig({
@@ -29,31 +31,31 @@ module.exports = function(grunt) {
                 }
             }
         },
-        jsbeautifier: {
-            files: [
-                'src/scripts/**/*',
-                'Gruntfile.js'
-            ],
-            options: {}
-        },
-        uglify: {
-            options: {
-                // expand: true,
-                mangle: true,
-                compress: true,
-                report: 'min',
-                preserveComments: false,
-                banner: '',
-                footer: ''
-            },
-            my_target: {
-                files: {
-                    'src/scripts/dist/main.min.js': ['src/scripts/main.js']
-                }
-            }
-        },
+        // jsbeautifier: {
+        //     files: [
+        //         'src/scripts/**/*',
+        //         'Gruntfile.js'
+        //     ],
+        //     options: {}
+        // },
+        // uglify: {
+        //     options: {
+        //         // expand: true,
+        //         mangle: true,
+        //         compress: true,
+        //         report: 'min',
+        //         preserveComments: false,
+        //         banner: '',
+        //         footer: ''
+        //     },
+        //     my_target: {
+        //         files: {
+        //             'src/scripts/dist/main.min.js': ['src/scripts/main.js']
+        //         }
+        //     }
+        // },
         requirejs: {
-          compile: {
+          production: {
             options: {
               baseUrl: "src/scripts",
               mainConfigFile: "src/scripts/main.js",
@@ -67,13 +69,13 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-jsbeautifier');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    // grunt.loadNpmTasks('grunt-jsbeautifier');
+    // grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
 
-    grunt.registerTask('default', ['requirejs', 'uglify', 'compass', 'watch']);
+    grunt.registerTask('default', ['requirejs', 'compass', 'watch']);
     grunt.registerTask('styles', ['compass']);
-    grunt.registerTask('scripts', ['uglify']);
-    grunt.registerTask('beautify', ['jsbeautifier']);
+    // grunt.registerTask('scripts', ['uglify']);
+    // grunt.registerTask('beautify', ['jsbeautifier']);
 
 };
