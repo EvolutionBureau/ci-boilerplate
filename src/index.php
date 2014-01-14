@@ -166,6 +166,7 @@ if(isset($_SERVER['SERVER_NAME'])) {
 	$serverName = $_SERVER['SERVER_NAME'];
 
 	switch($_SERVER['SERVER_NAME']) {
+		case (preg_match('/\.biz$/', $serverName) ? true : false) :
 		case (preg_match('/^(local|localhost).*/', $serverName) ? true : false) :
 			define('ENVIRONMENT', 'local');
 			break;
