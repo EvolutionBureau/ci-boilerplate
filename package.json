@@ -12,6 +12,7 @@
     "grunt-contrib-compass": "*",
     "grunt-jsbeautifier": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-contrib-requirejs": "~0.4.1"
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-bower-clean": "~0.2.1"
   }
 }

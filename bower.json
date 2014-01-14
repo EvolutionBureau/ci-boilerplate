@@ -9,10 +9,16 @@
   "dependencies": {
     "modernizr": "~2.6.2",
     "jquery": "~1.10.2",
-    "backbone-amd": null,
-    "underscore-amd": null,
+    "backbone": null,
+    "underscore": null,
     "bootstrap": "~2.2.2",
-    "font-awesome": "~3.1.1",
-    "requirejs": null
+    "font-awesome": "~3.1.1"
+  },
+  "dependenciesIgnore" : {
+    "backbone": ["**/!(backbone.js)"],
+    "modernizr": ["**/!(modernizr.js)"],
+    "jquery": ["**/!(jquery.js)"],
+    "underscore": ["**/!(underscore.js)"],
+    "when": ["docs", "test", "*.!(js)", ".*"]
   }
 }
