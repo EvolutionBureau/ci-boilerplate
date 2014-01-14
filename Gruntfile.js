@@ -16,7 +16,8 @@ module.exports = function(grunt) {
                 ],
                 tasks: ['compass'],
                 options: {
-                    nospawn: true
+                    nospawn: true,
+                    livereload: true
                 }
             }
         },
