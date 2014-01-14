@@ -4,11 +4,7 @@
 @import "utils";
 
 // reset, fonts, and other globals
-@import "reset";
 @import "fonts";
-
-//@import "font_awesome";
-// see list of icons here:  http://fortawesome.github.com/Font-Awesome/
 
 // plugins
 @import "bootstrap";
@@ -17,16 +13,3 @@
 // site styles go here
 @import "layout";
 @import "modal";
-
-// media queries & print styles
-@import "print";
-
-body {
-	background: $white;
-	a {
-		color: $black;
-	}
-	a:hover {
-		color: $otherColor;
-	}
-}
