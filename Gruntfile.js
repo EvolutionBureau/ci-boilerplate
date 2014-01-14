@@ -1,5 +1,3 @@
-var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
-
 module.exports = function(grunt) {
 
     grunt.initConfig({
@@ -18,7 +16,8 @@ module.exports = function(grunt) {
                 ],
                 tasks: ['compass'],
                 options: {
-                    nospawn: true
+                    nospawn: true,
+                    livereload: true
                 }
             }
         },
