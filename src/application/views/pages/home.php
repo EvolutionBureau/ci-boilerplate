@@ -11,6 +11,23 @@
           <li>Manually compile your JS <code>node_modules/.bin/grunt scripts</code></li>
           <li>Mobile detection.  Your device is a: <?= $deviceType ?></li>
         </ol>
+
+        <strong>Bower</strong>
+        <ol>
+          <li>First update the component.json file to include dependencies</li>
+          <li>Run <code>bower install</code></li>
+          <li>The <code>.bowerrc</code> configures what directory bower installs to ("bower-components")</li>
+          <li>Manually compile your JS <code>node_modules/.bin/grunt scripts</code></li>
+          <li>Update the dependencies and the install path and run <code>bower-installer</code> in the terminal, this will only install the main files, to change which main files you want to install update the “sources” <a href="https://npmjs.org/package/bower-installer" target="_blank">https://npmjs.org/package/bower-installer</a></li>
+        </ol>
+
+        <strong>Grunt</strong>
+        <ol>
+          <li>Update Gruntfile.js to include which files to uglify / minify.</li>
+          <li>Update footer.php to include the js files</li>
+        </ol>
+
+
         <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
       </div>
     </div>
