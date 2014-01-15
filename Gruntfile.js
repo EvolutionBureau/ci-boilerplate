@@ -47,49 +47,27 @@ module.exports = function(grunt) {
                 banner: '',
                 footer: ''
             },
-            // my_target: {
-            //     files: {
-            //         'src/scripts/dist/main.min.js': ['src/scripts/main.js']
-            //     }
-            // }
             js : {
                 files : {
                     'src/scripts/dist/main.min.js' : [
+                        'src/scripts/vendor/jquery/jquery.js',
+                        'src/scripts/vendor/underscore/underscore.js',
                         'src/scripts/vendor/backbone/backbone.js',
-                        'src/scripts/vendor/**/*.js',
-                        'src/scripts/views/**/*.js',
+                        //'src/scripts/vendor/**/*.js',
+                        'src/scripts/app/**/*.js',
+                        'src/scripts/app/app.js',
                         'src/scripts/main.js'
                     ]
                 }
             }
         }
-
-        // Future support for requirejs
-        //,
-        // requirejs: {
-        //   production: {
-        //     options: {
-        //       baseUrl: "src/scripts",
-        //       mainConfigFile: "src/scripts/main.js",
-        //       name: "main",
-        //       out: "src/scripts/dist/main.min.js",
-        //       include: ['vendor/requirejs/require.js']
-        //     }
-        //   }
-        // }
     });
-
+    
+    // Register grunt tasks
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-jsbeautifier');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-
-    // Clean the vendor files using "grunt bower_clean" or 
-    // "grunt bower_clean --dry-run" to see what files will be removed
-    grunt.loadNpmTasks('grunt-bower-clean');
-
-    // Future support for requirejs
-    //grunt.loadNpmTasks('grunt-contrib-requirejs');
 
     // Default grunt task when running "grunt"
     grunt.registerTask('default', ['uglify', 'compass', 'watch']);

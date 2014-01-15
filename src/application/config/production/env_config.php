@@ -8,3 +8,6 @@
 |	4 = All Messages
 */
 $config['log_threshold'] = 0;
+
+// Use minification
+$config['use_minify'] = true;

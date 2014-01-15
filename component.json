@@ -1,0 +1,21 @@
+{
+  "name": "ci-boilerplate",
+  "version": "1.0.0",
+  "main": "src/css/main.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "modernizr": "latest",
+    "jquery": "~1.10.2",
+    "backbone": "latest",
+    "underscore": "latest"
+  },
+  "install" : {
+    "path" : "src/scripts/vendor",
+    "sources" : {
+      "modernizr" : "bower-components/modernizr/modernizr.js"
+    }
+  }
+}
