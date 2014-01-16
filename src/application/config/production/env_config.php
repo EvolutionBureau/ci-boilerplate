@@ -11,3 +11,5 @@ $config['log_threshold'] = 0;
 
 // Use minification
 $config['use_minify'] = true;
+// facebook application id
+$config['fb_id'] = 000000000000000;
