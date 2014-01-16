@@ -2,6 +2,18 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        bower: {
+            install: {
+                //just run 'grunt bower:install' and you'll see files from your Bower packages in lib directory
+                options : {
+                    targetDir : 'src/scripts/lib',
+                    install : true,
+                    layout: "byType",
+                    cleanTargetDir: true,
+                    cleanBowerDir: true,
+                }
+            }
+        },
         watch: {
             scripts: {
                 files: ['src/scripts/main.js', 'src/scripts/vendor/*.js'],
@@ -68,6 +80,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-jsbeautifier');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-bower-task');
 
     // Default grunt task when running "grunt"
     grunt.registerTask('default', ['uglify', 'compass', 'watch']);

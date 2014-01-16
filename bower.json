@@ -1,0 +1,26 @@
+{
+  "name": "ci-boilerplate",
+  "version": "1.0.0",
+  "main": "src/css/main.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "modernizr": "*",
+    "jquery": "~1.10.2",
+    "backbone": "*",
+    "underscore": "*",
+    "bootstrap-sass": "*"
+  },
+  "exportsOverride": {
+    "bootstrap-sass": {
+      "js": "js/*.js",
+      "scss": "lib/*.scss",
+      "img": "img/*.png"
+    },
+    "modernizr": {
+      "js": "modernizr.js"
+    }
+  }
+}

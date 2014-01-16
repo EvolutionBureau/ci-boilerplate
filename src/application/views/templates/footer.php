@@ -22,7 +22,5 @@
 
       <?php endif; ?>
 
-
-
     </body>
 </html>
