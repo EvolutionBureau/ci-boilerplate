@@ -162,16 +162,17 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-if(isset($_SERVER['SERVER_NAME'])) {
-	$serverName = $_SERVER['SERVER_NAME'];
+if(isset($_SERVER['HTTP_HOST'])) {
+	$serverName = $_SERVER['HTTP_HOST'];
 
-	switch($_SERVER['SERVER_NAME']) {
+	switch($serverName) {
 		case (preg_match('/\.biz$/', $serverName) ? true : false) :
 		case (preg_match('/^(local|localhost).*/', $serverName) ? true : false) :
 			define('ENVIRONMENT', 'local');
 			break;
 
 		case (preg_match('/^(dev|development).*/', $serverName) ? true : false) :
+		case 'ci-boilerplate.herokuapp.com':
 			define('ENVIRONMENT', 'development');
 			break;
 
