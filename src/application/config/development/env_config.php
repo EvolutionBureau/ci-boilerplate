@@ -9,6 +9,9 @@
 */
 $config['log_threshold'] = 1;
 
+// Add base url
+$config['base_url']	= '';
+
 // Use minification
 $config['use_minify'] = false;
 // facebook application id
