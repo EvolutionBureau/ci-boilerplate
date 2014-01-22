@@ -10,7 +10,8 @@
     "extra": {
         "heroku": {
             "document-root": "src",
-            "index-document": "index.php"
+            "index-document": "index.php",
+            "nginx-includes": ["config/heroku/nginx.conf"]
         }
     }
 }
