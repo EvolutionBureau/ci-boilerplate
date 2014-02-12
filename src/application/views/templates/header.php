@@ -10,18 +10,18 @@
       <title><?= $this->config->item('site_title'); ?></title>
       <meta name="description" content="<?= $this->config->item('site_description'); ?>">
       <meta name="viewport" content="width=device-width">
-      <link rel="shortcut icon" href="favicon.ico"/> 
+      <link rel="shortcut icon" href="favicon.ico"/>
       <meta name="keywords" content=""/>
       <meta name="author" content="Evolution Bureau">
     <!-- END: meta tags -->
 
     <!-- BEGIN: OG FBook meta tags -->
-      <meta property="og:type" content="website"/> 
+      <meta property="og:type" content="website"/>
       <meta property="og:image" content="<?= $this->config->item('base_url'); ?>/media/images/global_share[500x500].png" />
-      <meta property="og:url" content="<?= $this->config->item('base_url'); ?>"/> 
-      <meta property="og:title" content="<?= $this->config->item('site_title'); ?>" /> 
-      <meta property="og:site_name" content="<?= $this->config->item('site_name'); ?>"/> 
-      <meta property="og:description" content="<?= $this->config->item('site_description'); ?>"/> 
+      <meta property="og:url" content="<?= $this->config->item('base_url'); ?>"/>
+      <meta property="og:title" content="<?= $this->config->item('site_title'); ?>" />
+      <meta property="og:site_name" content="<?= $this->config->item('site_name'); ?>"/>
+      <meta property="og:description" content="<?= $this->config->item('site_description'); ?>"/>
     <!-- END: OG FBook meta tags -->
 
     <!-- BEGIN: Twitter Card meta tags -->
@@ -51,7 +51,7 @@
           /*]]>*/
         </script>
     </head>
-    <body>
+    <body data-device="<?= $deviceType ?>">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
