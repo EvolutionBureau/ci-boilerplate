@@ -179,6 +179,10 @@ if(isset($_SERVER['HTTP_HOST'])) {
 		case (preg_match('/^(stage|staging|qa|test).*/', $serverName) ? true : false) :
 			define('ENVIRONMENT', 'staging');
 			break;
+
+        default:
+            define('ENVIRONMENT', 'production');
+            break;
 	}
 }else{
 	define('ENVIRONMENT', 'production');
@@ -201,7 +205,7 @@ if (defined('ENVIRONMENT'))
 		case 'development':
 			error_reporting(E_ALL);
 		break;
-	
+
 		case 'testing':
 		case 'production':
 			error_reporting(0);
