@@ -45,6 +45,9 @@ $ heroku config:set BUILDPACK_URL=https://github.com/CHH/heroku-buildpack-php
 $ git push heroku master
 ```
 
+## Working example
+[http://ci-boilerplate.herokuapp.com/](http://ci-boilerplate.herokuapp.com/)
+
 ## License
 
 [MIT](LICENSE)
